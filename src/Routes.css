@@ -1,0 +1,56 @@
+.nav-bar {
+  margin-bottom: 20px;
+  box-shadow: 0 0 50px 10px rgb(0 0 0 / 10%);
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  transition: box-shadow 2000ms ease;
+}
+
+.nav-bar:hover {
+  box-shadow: 0 0 50px 10px rgb(0 0 0 / 50%);
+}
+
+.nav-bar-button {
+  max-width: 100px;
+  margin: auto 5px auto 5px;
+  min-height: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-content: center !important;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-bar-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ant-page-header-heading-left {
+  font-size: x-large;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* .ant-page-header-heading-title {
+} */
+
+.ant-page-header-heading-sub-title {
+  margin-left: 5px;
+}
+
+.ant-page-header-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ant-page-header-heading-extra {
+  display: flex;
+  flex-direction: row-reverse;
+}

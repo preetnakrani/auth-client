@@ -1,0 +1,24 @@
+.fading-button-holder {
+  background-color: rgb(255, 255, 255, 100%);
+  box-shadow: 0 0 50px 0px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 2000ms ease, background-color 1000ms ease-in-out;
+  padding: 10px 10px 10px 10px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.fading-button-holder:hover {
+  box-shadow: 0 0 50px 0px rgb(0 0 0 / 50%);
+  background-color: rgb(255, 255, 255, 0%);
+  transition: box-shadow 1000ms ease, background-color 1000ms ease-in-out;
+}
