@@ -3,16 +3,18 @@ import jwt from "jsonwebtoken";
 
 let accessToken = "";
 
-export let setAccessToken = (token) => {
+export const setAccessToken = (token) => {
   accessToken = token;
 };
 
-export let getAccessToken = () => {
+export const getAccessToken = () => {
   return accessToken;
 };
 
-export let getNewAccessToken = async () => {
-  let api = axios.create({ baseURL: "http://localhost:9999/apis/v1" });
+export const getNewAccessToken = async () => {
+  let api = axios.create({
+    baseURL: `${process.env.REACT_APP_backend_link || ""}/apis/v1`,
+  });
   let token = await api.get("/refresh", {
     withCredentials: true,
   });
@@ -20,7 +22,7 @@ export let getNewAccessToken = async () => {
   return accessToken;
 };
 
-export let isAuth = async () => {
+export const isAuth = async () => {
   let token = getAccessToken();
   let auth = false;
   let newToken = "";
@@ -36,9 +38,8 @@ export let isAuth = async () => {
         auth = true;
       }
     } catch (e) {
-      console.log("here at isAuth");
-      console.log(Object.keys(e));
       console.log(e);
+      setAccessToken("");
       return [auth, getAccessToken()];
     }
   } else {
@@ -57,4 +58,17 @@ export const getTokenData = () => {
   } catch (e) {
     return {};
   }
+};
+
+export const currAuth = () => {
+  try {
+    let { exp } = jwt.decode(accessToken);
+    if (!exp || Date.now() >= exp * 1000) {
+      return false;
+    }
+  } catch (e) {
+    return false;
+  }
+
+  return true;
 };

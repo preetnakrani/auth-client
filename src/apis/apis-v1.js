@@ -2,7 +2,7 @@ import axios from "axios";
 import { isAuth } from "../auth";
 
 let api = axios.create({
-  baseURL: "http://localhost:9999/apis/v1",
+  baseURL: `${process.env.REACT_APP_backend_link || ""}/apis/v1`,
   withCredentials: true,
 });
 

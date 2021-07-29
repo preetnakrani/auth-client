@@ -1,0 +1,15 @@
+.forgot-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  width: 60%;
+  margin: 30px auto auto auto;
+}
+
+.forgot-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
