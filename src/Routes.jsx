@@ -163,6 +163,9 @@ const Home = () => {
   return (
     <div>
       <div>Authication Starter!!!</div>
+      <div>
+        Try to signup, login, reset password, get reset link, confirm email!
+      </div>
       {/* <div>{message}</div>
       <div
         onClick={() => {
