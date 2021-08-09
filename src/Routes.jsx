@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Route, Switch, useHistory, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
-// import { FadingButton } from "./common-components/fading-button/FadingButton";
 import { PageHeader, Button } from "antd";
 import {
   UserOutlined,
@@ -149,8 +148,8 @@ Routes.propTypes = {
 
 // delete
 const Home = () => {
-  const [message, setMessage] = useState("");
-  const history = useHistory();
+  // const [message, setMessage] = useState("");
+  // const history = useHistory();
   useEffect(() => {
     let stuff = async () => {
       try {
@@ -163,8 +162,8 @@ const Home = () => {
 
   return (
     <div>
-      <div>Hello mate! Do something!!!</div>
-      <div>{message}</div>
+      <div>Authication Starter!!!</div>
+      {/* <div>{message}</div>
       <div
         onClick={() => {
           history.push("/protected");
@@ -178,7 +177,7 @@ const Home = () => {
         }}
       >
         The unprotecting
-      </div>
+      </div> */}
     </div>
   );
 };
