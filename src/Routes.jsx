@@ -78,6 +78,7 @@ export const Routes = (props) => {
               props.setAuth(false);
               history.push("/");
             }}
+            style={{ width: "auto" }}
           >
             Logout
           </Button>
@@ -100,7 +101,6 @@ export const Routes = (props) => {
         </div>
       }
       extra={extra}
-      backIcon={<UserOutlined className="trytofindthis" />}
     />
   );
   return (

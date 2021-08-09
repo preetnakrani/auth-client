@@ -39,7 +39,7 @@ export const Signup = (props) => {
   const onFinish = (values) => {
     setLoading(true);
     api
-      .post("/test", values)
+      .post("/signup", values)
       .then((res) => {
         console.log(res);
         setErr(message);
