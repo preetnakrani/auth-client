@@ -150,15 +150,15 @@ Routes.propTypes = {
 const Home = () => {
   // const [message, setMessage] = useState("");
   // const history = useHistory();
-  useEffect(() => {
-    let stuff = async () => {
-      try {
-        let res = await api.get("/protected");
-        setMessage(res.data);
-      } catch (e) {}
-    };
-    stuff();
-  }, []);
+  // useEffect(() => {
+  //   let stuff = async () => {
+  //     try {
+  //       let res = await api.get("/protected");
+  //       setMessage(res.data);
+  //     } catch (e) {}
+  //   };
+  //   stuff();
+  // }, []);
 
   return (
     <div>
