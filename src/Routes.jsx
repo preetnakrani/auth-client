@@ -1,4 +1,4 @@
-import React, { useEffect /*useState*/ } from "react";
+import React from "react";
 import { Route, Switch, useHistory, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -19,6 +19,7 @@ import { Signup } from "./routes/signup/signup";
 import { Login } from "./routes/login/login";
 import { Forgot } from "./routes/forgotpassword/forgot";
 import { Resend } from "./routes/resend-verification/resend";
+import { UpdatePassword } from "./routes/updatePassword/updatePassword";
 
 import "./Routes.css";
 
@@ -133,6 +134,11 @@ export const Routes = (props) => {
           render={() => <div>You shall not pass</div>}
         />
         <Route
+          exact
+          path="/update/password/:id/:token"
+          component={UpdatePassword}
+        />
+        <Route
           path="*"
           render={() => <div>This route does not exist mate!</div>}
         />
@@ -146,41 +152,13 @@ Routes.propTypes = {
   setAuth: PropTypes.func.isRequired,
 };
 
-// delete
 const Home = () => {
-  // const [message, setMessage] = useState("");
-  // const history = useHistory();
-  // useEffect(() => {
-  //   let stuff = async () => {
-  //     try {
-  //       let res = await api.get("/protected");
-  //       setMessage(res.data);
-  //     } catch (e) {}
-  //   };
-  //   stuff();
-  // }, []);
-
   return (
     <div>
       <div>Authication Starter!!!</div>
       <div>
         Try to signup, login, reset password, get reset link, confirm email!
       </div>
-      {/* <div>{message}</div>
-      <div
-        onClick={() => {
-          history.push("/protected");
-        }}
-      >
-        The protectiong
-      </div>
-      <div
-        onClick={() => {
-          history.push("/unprotected");
-        }}
-      >
-        The unprotecting
-      </div> */}
     </div>
   );
 };

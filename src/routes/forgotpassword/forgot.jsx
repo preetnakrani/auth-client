@@ -24,7 +24,7 @@ export const Forgot = (props) => {
     setModalOpen(true);
     setLoading(true);
     api
-      .post("/test", values)
+      .post("/update/password", values)
       .then(() => {
         setLoading(false);
       })

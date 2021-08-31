@@ -24,7 +24,7 @@ export const Resend = (props) => {
     setModalOpen(true);
     setLoading(true);
     api
-      .post("/test", values)
+      .post("/resend", values)
       .then(() => {
         setLoading(false);
       })
